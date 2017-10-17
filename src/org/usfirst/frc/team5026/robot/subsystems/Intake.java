@@ -15,6 +15,10 @@ public class Intake extends Subsystem {
 		this.leftMotor = leftMotor;
 		this.rightMotor = rightMotor;
 	}
+	public void intake(double power) {
+		leftMotor.set(Math.abs(power));
+		rightMotor.set(Math.abs(power));
+	}
 
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.
