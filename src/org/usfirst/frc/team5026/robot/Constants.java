@@ -1,4 +1,4 @@
-package src.org.usfirst.frc.team5026.robot;
+package org.usfirst.frc.team5026.robot;
 
 public class Constants {
 	//PWM port the lift/lower motors will go

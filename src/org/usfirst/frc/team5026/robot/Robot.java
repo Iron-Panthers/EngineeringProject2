@@ -1,5 +1,12 @@
 
-package src.org.usfirst.frc.team5026.robot;
+package org.usfirst.frc.team5026.robot;
+
+import org.usfirst.frc.team5026.robot.Constants;
+import org.usfirst.frc.team5026.robot.Hardware;
+import org.usfirst.frc.team5026.robot.OI;
+import org.usfirst.frc.team5026.robot.commands.ExampleCommand;
+import org.usfirst.frc.team5026.robot.subsystems.Elevator;
+import org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -7,9 +14,6 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import src.org.usfirst.frc.team5026.robot.commands.ExampleCommand;
-import src.org.usfirst.frc.team5026.robot.subsystems.Elevator;
-import src.org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
