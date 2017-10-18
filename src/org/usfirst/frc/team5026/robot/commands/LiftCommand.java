@@ -6,9 +6,9 @@ import src.org.usfirst.frc.team5026.robot.Robot;
 /**
  *
  */
-public class IntakeCommand extends Command {
+public class LiftCommand extends Command {
 	double power;
-	public IntakeCommand(double power) {
+	public LiftCommand(double power) {
 		// Use requires() here to declare subsystem dependencies
 		requires(Robot.intake);
 		this.power = power;
