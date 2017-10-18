@@ -1,4 +1,4 @@
-package src.org.usfirst.frc.team5026.robot.subsystems;
+package org.usfirst.frc.team5026.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;

@@ -17,8 +17,8 @@ public class OI {
 	Button stickBtnTwo;
 	
 	//Motor powers
-	double liftPower = Robot.constants.liftPower;
-	double lowerPower = Robot.constants.lowerPower;
+	double liftPower = Constants.liftPower;
+	double lowerPower = Constants.lowerPower;
 	
 	public OI() {
 		stick = new Joystick(1);

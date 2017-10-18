@@ -9,11 +9,11 @@ public class Hardware {
 	
 	public Hardware() {
 		//Elevator Motors
-		leftElevatorMotor = new Spark(Robot.constants.leftMotorPort);
-		rightElevatorMotor = new Spark(Robot.constants.rightMotorPort);
+		leftElevatorMotor = new Spark(Constants.leftMotorPort);
+		rightElevatorMotor = new Spark(Constants.rightMotorPort);
 		
 		//Inverted
-		leftElevatorMotor.setInverted(Robot.constants.leftMotorInverted);
-		rightElevatorMotor.setInverted(Robot.constants.rightMotorInverted);
+		leftElevatorMotor.setInverted(Constants.leftMotorInverted);
+		rightElevatorMotor.setInverted(Constants.rightMotorInverted);
 	}
 }

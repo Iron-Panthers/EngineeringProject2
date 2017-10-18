@@ -1,9 +1,6 @@
 
 package org.usfirst.frc.team5026.robot;
 
-import org.usfirst.frc.team5026.robot.Constants;
-import org.usfirst.frc.team5026.robot.Hardware;
-import org.usfirst.frc.team5026.robot.OI;
 import org.usfirst.frc.team5026.robot.commands.ExampleCommand;
 import org.usfirst.frc.team5026.robot.subsystems.Elevator;
 import org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
@@ -27,7 +24,6 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static Hardware hardware;
 	public static OI oi;
-	public static Constants constants;
 	public static Elevator elevator;
 	
 
@@ -41,7 +37,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		hardware = new Hardware();
-		constants = new Constants();
 		oi = new OI();
 		elevator = new Elevator(hardware.leftElevatorMotor,hardware.rightElevatorMotor);
 		chooser.addDefault("Default Auto", new ExampleCommand());
