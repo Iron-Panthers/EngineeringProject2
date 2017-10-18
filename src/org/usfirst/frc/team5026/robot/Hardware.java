@@ -4,8 +4,8 @@ import edu.wpi.first.wpilibj.Spark;
 
 public class Hardware {
 	
-	Spark leftMotor;
-	Spark rightMotor;
+	public Spark leftMotor;
+	public Spark rightMotor;
 	
 	public Hardware() {
 		leftMotor = new Spark(0);

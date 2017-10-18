@@ -18,14 +18,14 @@ public class Lift extends Subsystem {
 		this.rightMotor = rightMotor;
 	}
 	
-	public void up(double power) {
-		leftMotor.set(power);
-		rightMotor.set(power);
+	public void up(double rate) {
+		leftMotor.set(rate);
+		rightMotor.set(rate);
 	}
 
-	public void down(double power) {
-		leftMotor.set(-power);
-		rightMotor.set(-power);
+	public void down(double rate) {
+		leftMotor.set(-rate);
+		rightMotor.set(-rate);
 	}
 	
 	public void stop() {

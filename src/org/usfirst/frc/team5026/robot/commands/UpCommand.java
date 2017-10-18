@@ -9,22 +9,23 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class UpCommand extends Command {
 	
-	double power;
+	double rate;
 
-    public UpCommand(double power) {
+    public UpCommand(double rate) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	this.power = Math.abs(power);
+    	this.rate = Math.abs(rate);
     	requires(Robot.lift);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	Robot.lift.stop();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.lift.up(power);
+    	Robot.lift.up(rate);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -40,5 +41,6 @@ public class UpCommand extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.lift.stop();
     }
 }
