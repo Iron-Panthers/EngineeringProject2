@@ -25,8 +25,8 @@ public class OI {
 	}
 	
 	public void mapButtons() {
-		button1.whileHeld(new UpCommand(0.5));
-		button2.whileHeld(new DownCommand(0.5));
+		button1.whileHeld(new UpCommand(Robot.liftRate));
+		button2.whileHeld(new DownCommand(Robot.liftRate));
 	}
 	
 }

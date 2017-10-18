@@ -25,6 +25,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static Hardware hardware;
 	public static Lift lift;
+	public static double liftRate;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -37,6 +38,7 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		hardware = new Hardware();
 		lift = new Lift(Robot.hardware.leftMotor, Robot.hardware.rightMotor);
+		liftRate = 0.5;
 		oi = new OI();
 		oi.mapButtons();
 		chooser.addDefault("Default Auto", new ExampleCommand());
