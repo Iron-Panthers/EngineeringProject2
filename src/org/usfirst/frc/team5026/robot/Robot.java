@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import src.org.usfirst.frc.team5026.robot.commands.ExampleCommand;
 import src.org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
+import src.org.usfirst.frc.team5026.robot.subsystems.Intake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,8 +21,11 @@ import src.org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static Hardware hardware;
 	public static OI oi;
 	public static Constants constants;
+	public static Intake intake;
+	
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -32,9 +36,12 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		hardware = new Hardware();
 		constants = new Constants();
 		oi = new OI();
+		intake = new Intake(hardware.leftElevatorMotor,hardware.rightElevatorMotor);
 		chooser.addDefault("Default Auto", new ExampleCommand());
+		oi.mapButtons();
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
