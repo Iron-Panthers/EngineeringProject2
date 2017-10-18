@@ -8,8 +8,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import src.org.usfirst.frc.team5026.robot.commands.ExampleCommand;
+import src.org.usfirst.frc.team5026.robot.subsystems.Elevator;
 import src.org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
-import src.org.usfirst.frc.team5026.robot.subsystems.Intake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 	public static Hardware hardware;
 	public static OI oi;
 	public static Constants constants;
-	public static Intake intake;
+	public static Elevator elevator;
 	
 
 	Command autonomousCommand;
@@ -39,7 +39,7 @@ public class Robot extends IterativeRobot {
 		hardware = new Hardware();
 		constants = new Constants();
 		oi = new OI();
-		intake = new Intake(hardware.leftElevatorMotor,hardware.rightElevatorMotor);
+		elevator = new Elevator(hardware.leftElevatorMotor,hardware.rightElevatorMotor);
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		oi.mapButtons();
 		// chooser.addObject("My Auto", new MyAutoCommand());

@@ -3,20 +3,23 @@ package src.org.usfirst.frc.team5026.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import src.org.usfirst.frc.team5026.robot.commands.IntakeCommand;
-import src.org.usfirst.frc.team5026.robot.commands.OuttakeCommand;
+import src.org.usfirst.frc.team5026.robot.commands.LiftCommand;
+import src.org.usfirst.frc.team5026.robot.commands.LowerCommand;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	//Joystick and buttons
 	Joystick stick;
 	Button stickBtnOne;
 	Button stickBtnTwo;
 	
-	double intakePower = Robot.constants.intakePower;
-	double outtakePower = Robot.constants.outtakePower;
+	//Motor powers
+	double liftPower = Robot.constants.liftPower;
+	double lowerPower = Robot.constants.lowerPower;
+	
 	public OI() {
 		stick = new Joystick(1);
 		stickBtnOne = new JoystickButton(stick, 1);
@@ -24,8 +27,8 @@ public class OI {
 
 	}
 	public void mapButtons() {
-		stickBtnOne.whileHeld(new IntakeCommand(intakePower));
-		stickBtnTwo.whileHeld(new OuttakeCommand(outtakePower));
+		stickBtnOne.whileHeld(new LiftCommand(liftPower)); //Trigger lifts
+		stickBtnTwo.whileHeld(new LowerCommand(lowerPower)); //Side button lowers
 	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a

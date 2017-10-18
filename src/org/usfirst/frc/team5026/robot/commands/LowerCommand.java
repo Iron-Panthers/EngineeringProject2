@@ -6,11 +6,11 @@ import src.org.usfirst.frc.team5026.robot.Robot;
 /**
  *
  */
-public class OuttakeCommand extends Command {
+public class LowerCommand extends Command {
 	double power;
-	public OuttakeCommand(double power) {
+	public LowerCommand(double power) {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.intake);
+		requires(Robot.elevator);
 		this.power = power;
 	}
 
@@ -22,7 +22,7 @@ public class OuttakeCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.intake.outtake(power);
+		Robot.elevator.lower(power);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -40,6 +40,6 @@ public class OuttakeCommand extends Command {
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
-		Robot.intake.stop();
+		Robot.elevator.stop();
 	}
 }

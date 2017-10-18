@@ -10,7 +10,7 @@ public class LiftCommand extends Command {
 	double power;
 	public LiftCommand(double power) {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.intake);
+		requires(Robot.elevator);
 		this.power = power;
 	}
 
@@ -22,7 +22,7 @@ public class LiftCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
-		Robot.intake.intake(power);
+		Robot.elevator.lift(power);
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -40,6 +40,6 @@ public class LiftCommand extends Command {
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
-		Robot.intake.stop();
+		Robot.elevator.stop();
 	}
 }
