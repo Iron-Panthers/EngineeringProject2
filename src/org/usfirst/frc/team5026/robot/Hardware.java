@@ -1,0 +1,15 @@
+package org.usfirst.frc.team5026.robot;
+
+import edu.wpi.first.wpilibj.Spark;
+
+public class Hardware {
+	
+	Spark leftMotor;
+	Spark rightMotor;
+	
+	public Hardware() {
+		leftMotor = new Spark(0);
+		rightMotor = new Spark(1);
+	}
+
+}
