@@ -1,5 +1,0 @@
-*.class
-.classpath
-build.properties
-build.xml
-/bin/
